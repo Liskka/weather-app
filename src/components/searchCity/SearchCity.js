@@ -1,11 +1,12 @@
 import { useEffect, useState, useContext } from "react";
+import { withRouter } from "react-router-dom";
 
 import regionAndCities from '../../regionAndCities.json';
 import { Context } from "../app/App";
 import './searchCity.scss';
 
 
-const SearchCity = ({setTogSearchCity}) => {
+const SearchCity = ({setTogSearchCity, history}) => {
 
   const [regions, setRegions] = useState([]);
   const [cities, setCities] = useState();
@@ -26,11 +27,13 @@ const SearchCity = ({setTogSearchCity}) => {
   }
 
   const sumbitCity = (city) => {
-    setActiveCity(city);
+    // setActiveCity(city);
     setTogSearchCity(false);
+    history.push({pathname: cities[city], state: {fetchName: cities[city]}})
   }
 
   // console.log(Object.keys(cities));
+  console.log('cities = ', cities);
 
   return (
     <div className="searchPanel">
@@ -61,4 +64,4 @@ const SearchCity = ({setTogSearchCity}) => {
   )
 }
 
-export default SearchCity;
+export default withRouter(SearchCity);

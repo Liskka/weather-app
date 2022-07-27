@@ -1,0 +1,25 @@
+@import'../../style/variables.scss';
+
+.map__content {
+  margin: 50px auto;
+  position: relative;
+  width: 726px;
+  height: 490px;
+  background-image: url('../../resources/img/map.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  // background-color: rgba(255, 255, 255, 0.4);
+  // box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.4);
+}
+
+.cityLink {
+  font-size: 16px;
+  font-weight: 500;
+
+  &:hover {
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: underline;
+    color: rgb(15, 51, 209);
+  }
+}

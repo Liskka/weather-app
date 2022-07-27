@@ -1,0 +1,227 @@
+[
+  {
+    "id": "0",
+    "name": "Харьков",
+    "fetchName": "Kharkiv",
+    "position": {
+      "top": "99px",
+      "left": "570px"
+    }
+  },
+  {
+    "id": "1",
+    "name": "Полтава",
+    "fetchName": "Poltava",
+    "position": {
+      "top": "111px",
+      "left": "493px"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Киев",
+    "fetchName": "Kyiv",
+    "position": {
+      "top": "68px",
+      "left": "336px"
+    }
+  },
+  {
+    "id": "3",
+    "name": "Запорожье",
+    "fetchName": "Zaporizhia",
+    "position": {
+      "top": "256px",
+      "left": "518px"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Донецк",
+    "fetchName": "Donetsk",
+    "position": {
+      "top": "254px",
+      "left": "628px"
+    }
+  },
+  {
+    "id": "5",
+    "name": "Ивано-Франковск",
+    "fetchName": "Ivano-Frankivsk",
+    "position": {
+      "top": "170px",
+      "left": "91px"
+    }
+  },
+  {
+    "id": "6",
+    "name": "Николаев",
+    "fetchName": "Mykolaiv",
+    "position": {
+      "top": "273px",
+      "left": "410px"
+    }
+  },
+  {
+    "id": "7",
+    "name": "Кировоград",
+    "fetchName": "Kirovohrad",
+    "position": {
+      "top": "195px",
+      "left": "392px"
+    }
+  },
+  {
+    "id": "8",
+    "name": "Ужгород",
+    "fetchName": "Uzhhorod",
+    "position": {
+      "top": "200px",
+      "left": "4px"
+    }
+  },
+  {
+    "id": "9",
+    "name": "Симферополь",
+    "fetchName": "Simferopol",
+    "position": {
+      "top": "405px",
+      "left": "477px"
+    }
+  },
+  {
+    "id": "10",
+    "name": "Днепропетровск",
+    "fetchName": "Dnipropetrovsk",
+    "position": {
+      "top": "194px",
+      "left": "515px"
+    }
+  },
+  {
+    "id": "11",
+    "name": "Одесса",
+    "fetchName": "Odesa",
+    "position": {
+      "top": "323px",
+      "left": "334px"
+    }
+  },
+  {
+    "id": "12",
+    "name": "Черкассы",
+    "fetchName": "Cherkasy",
+    "position": {
+      "top": "133px",
+      "left": "404px"
+    }
+  },
+  {
+    "id": "13",
+    "name": "Винница",
+    "fetchName": "Vinnytsia",
+    "position": {
+      "top": "228px",
+      "left": "297px"
+    }
+  },
+  {
+    "id": "14",
+    "name": "Львов",
+    "fetchName": "Lviv",
+    "position": {
+      "top": "105px",
+      "left": "70px"
+    }
+  },
+  {
+    "id": "15",
+    "name": "Житомир",
+    "fetchName": "Zhytomyr",
+    "position": {
+      "top": "80px",
+      "left": "257px"
+    }
+  },
+  {
+    "id": "16",
+    "name": "Луганск",
+    "fetchName": "Luhansk",
+    "position": {
+      "top": "176px",
+      "left": "659px"
+    }
+  },
+  {
+    "id": "17",
+    "name": "Черновцы",
+    "fetchName": "Chernivtsi",
+    "position": {
+      "top": "227px",
+      "left": "143px"
+    }
+  },
+  {
+    "id": "18",
+    "name": "Тернополь",
+    "fetchName": "Ternopil",
+    "position": {
+      "top": "117px",
+      "left": "166px"
+    }
+  },
+  {
+    "id": "19",
+    "name": "Ровное",
+    "fetchName": "Rivne",
+    "position": {
+      "top": "51px",
+      "left": "183px"
+    }
+  },
+  {
+    "id": "20",
+    "name": "Хмельницкий",
+    "fetchName": "Khmelnytskyi",
+    "position": {
+      "top": "142px",
+      "left": "261px"
+    }
+  },
+  {
+    "id": "21",
+    "name": "Сумы",
+    "fetchName": "Sumy",
+    "position": {
+      "top": "46px",
+      "left": "497px"
+    }
+  },
+  {
+    "id": "22",
+    "name": "Чернигов",
+    "fetchName": "Chernihiv",
+    "position": {
+      "top": "6px",
+      "left": "380px"
+    }
+  },
+  {
+    "id": "23",
+    "name": "Луцк",
+    "fetchName": "Lutsk",
+    "position": {
+      "top": "32px",
+      "left": "108px"
+    }
+  },
+  {
+    "id": "24",
+    "name": "Херсон",
+    "fetchName": "Kherson",
+    "position": {
+      "top": "327px",
+      "left": "437px"
+    }
+  }
+]

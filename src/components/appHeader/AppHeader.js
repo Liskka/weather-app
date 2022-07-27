@@ -3,16 +3,23 @@ import SearchCity from '../searchCity/SearchCity';
 
 import logoIcon from '../../resources/img/pngegg.png';
 import './appHeader.scss';
+import { withRouter } from 'react-router-dom';
 
 
 
-const AppHeader = () => {
+const AppHeader = ({history}) => {
   const [togSearchCity, setTogSearchCity] = useState(false);
 
 
   return (
     <>
-      <img src={logoIcon} alt="logo" className="logo" />
+      <img 
+        src={logoIcon} 
+        alt="logo" 
+        className="logo" 
+        onClick={() => history.push({pathname: '/'})}
+        style={{cursor: 'pointer'}}
+      />
       <div className="header">
         <div className="header__content">
           <div 
@@ -28,4 +35,4 @@ const AppHeader = () => {
   );
 }
 
-export default AppHeader;
+export default withRouter(AppHeader);
