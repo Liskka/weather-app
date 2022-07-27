@@ -1,0 +1,31 @@
+@import '../../style/variables.scss';
+
+.searchPanel {
+  margin: 0 auto 30px;
+  width: 1000px;
+  height: 200px;
+  background-color: $main-color;
+  border-radius: 15px;
+
+  &__info {
+    padding: 12px;
+    font-size: 20px;
+    display: inline-block;
+  }
+
+  &__content {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 10px 10px 10px;
+
+    &__item {
+      display: flex;
+      margin: 5px;
+      display: inline-block;
+      width: 150px;
+      cursor: pointer;
+    }
+  }
+
+}

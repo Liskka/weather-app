@@ -1,0 +1,46 @@
+@import '../../style//variables.scss';
+
+.weather {
+  position: relative;
+  width: 600px;
+  height: 180px;
+  background-color: $main-color;
+  border-radius: 15px;
+  padding: 15px;
+
+  &__city {
+    font-size: 30px;
+  }
+
+  &__temp {
+    font-size: 70px;
+    padding-left: 20px;
+    display: inline-block;
+  }
+
+  &__info {
+    font-size: 30px;
+    // width: 450px;
+    // display: inline-block;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 100px;
+    display: inline-block;
+  }
+
+  &__detail {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    font-size: 20px;
+    color: rgb(75, 75, 75);
+    cursor: pointer;
+
+    &:hover {
+      transition: all 0.2s ease-out;
+      font-size: 22px;
+    }
+  }
+}
