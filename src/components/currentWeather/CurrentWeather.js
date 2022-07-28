@@ -20,6 +20,7 @@ const CurrentWeather = ({ match, location, history }) => {
   const activeCity = location.state.fetchName;
   
   const {name, temp, info, icon, date} = weather;
+  
   const currentDate = new Date(date); // Date 2011-05-09T06:08:45.178Z
   const year = currentDate.getFullYear();
   const month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
@@ -29,7 +30,7 @@ const CurrentWeather = ({ match, location, history }) => {
 
   const today = `${year}-${month}-${day} ${hours}:${min}`;
 
-  console.log(today)
+  // console.log(today)
 
 
   useEffect(() => {
@@ -49,7 +50,7 @@ const CurrentWeather = ({ match, location, history }) => {
       return {
         name: data.name,
         temp: Math.round(data.main.temp - 273),
-        info: data.weather[0].description,
+        info: data.weather[0].description[0].toUpperCase() + data.weather[0].description.slice(1),
         icon: data.weather[0].icon,
         activeCity,
         date: data.dt * 1000
@@ -60,7 +61,7 @@ const CurrentWeather = ({ match, location, history }) => {
   return (
     <div className='weather'>
       <div className="weather__date">{today}</div>
-      <div className="weather__city">Текущая температура в городе {name}:</div>
+      <div className="weather__city">Температура в городе {name}:</div>
       <div className="weather__temp">{temp}{'\u00b0'}C</div>
       <img className="weather__icon" src={`https://openweathermap.org/img/w/${icon}.png`} alt="weather" />
       <div className="weather__info">{info}</div>

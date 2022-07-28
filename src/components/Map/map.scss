@@ -8,18 +8,38 @@
   background-image: url('../../resources/img/map.svg');
   background-repeat: no-repeat;
   background-size: contain;
-  // background-color: rgba(255, 255, 255, 0.4);
-  // box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.4);
-}
 
-.cityLink {
-  font-size: 16px;
-  font-weight: 500;
+  animation-name: mymove;
+  animation-duration: 0.5s;
 
-  &:hover {
-    font-weight: 700;
-    font-size: 18px;
-    text-decoration: underline;
-    color: rgb(15, 51, 209);
+  @keyframes mymove {
+    from {
+      width: 0%;
+      left: 700px;
+      bottom: 200px;
+      opacity: .1;
+    }
+
+    to {
+      width: 50%;
+      left: 0px;
+      bottom: 0;
+      opacity: 1;
+      width: 726px;
+      height: 490px;
+      margin: 50px auto;
+    }
+  }
+
+  .cityLink {
+    font-size: 16px;
+    font-weight: 500;
+
+    &:hover {
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: underline;
+      color: rgb(15, 51, 209);
+    }
   }
 }

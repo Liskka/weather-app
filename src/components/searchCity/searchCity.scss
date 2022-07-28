@@ -28,4 +28,23 @@
     }
   }
 
+  animation-name: searchCityOpen;
+  animation-duration: 0.5s;
+
+  @keyframes searchCityOpen {
+    from {
+      position: relative;
+      margin: 0;
+      left: -700px;
+      opacity: 0;
+    }
+
+    to {
+      position: relative;
+      margin: 0 auto 30px;
+      left: 0px;
+      opacity: 1;
+    }
+  }
+
 }

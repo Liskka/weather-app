@@ -1,8 +1,7 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
 
 import regionAndCities from '../../regionAndCities.json';
-import { Context } from "../app/App";
 import './searchCity.scss';
 
 
@@ -12,7 +11,6 @@ const SearchCity = ({setTogSearchCity, history}) => {
   const [cities, setCities] = useState();
   const [activeRegion, setActiveRegion] = useState('');
 
-  const {setActiveCity} = useContext(Context);
 
   useEffect(() => {
     const region = regionAndCities.map(obl => obl.region);
@@ -33,7 +31,7 @@ const SearchCity = ({setTogSearchCity, history}) => {
   }
 
   // console.log(Object.keys(cities));
-  console.log('cities = ', cities);
+  // console.log('cities = ', cities);
 
   return (
     <div className="searchPanel">

@@ -23,11 +23,10 @@ const Map = () => {
 const CityLink = ({cityInfo}) => {
 
   const {position: {top, left}} = cityInfo;
-  console.log(top, left)
-
+  
   return (
-    <Link className="cityLink" to={{pathname: cityInfo.fetchName, state: {fetchName: cityInfo.fetchName}}} style={{position: "absolute", top: (Number(String(top).slice(0, -2)) + 40) + 'px', left: String(left)}} >{cityInfo.name}</Link>
-  )
+    <Link className="cityLink" to={{pathname: cityInfo.fetchName, state: {fetchName: cityInfo.fetchName}}} style={{position: "absolute", top: String(top), left: String(left)}} >{cityInfo.name}</Link>
+    )
 }
 
 
