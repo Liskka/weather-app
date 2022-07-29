@@ -32,14 +32,23 @@
   }
 
   .cityLink {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
 
     &:hover {
-      font-weight: 700;
-      font-size: 18px;
-      text-decoration: underline;
-      color: rgb(15, 51, 209);
+      transition: all 0.2s ease-out;
+      padding: 0 7px 3px;
+      -webkit-transform: skew(-20deg);
+      background: linear-gradient(to bottom right, rgb(167, 208, 252), rgb(73, 152, 255));
+      border-radius: 7px;
+      box-shadow: 0 5px 6px 1px rgb(0 0 0 / 40%);
+      font-size: 23px;
+      z-index: 1;
+
+      .cityLink__text {
+        -webkit-transform: skew(20deg);
+      }
     }
   }
+
 }

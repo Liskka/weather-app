@@ -33,13 +33,23 @@ const SearchCity = ({setTogSearchCity, history}) => {
   // console.log(Object.keys(cities));
   // console.log('cities = ', cities);
 
+  const backToRegion = () => {
+    setActiveRegion('');
+    setCities(false);
+  }
+
   return (
     <div className="searchPanel">
       <div className="searchPanel__info">
-        Область: {activeRegion + (activeRegion ? ',' : '')}
-        {activeRegion && 
-          <div style={{display: 'inline-block', marginLeft: '15px'}}>Город: </div>  
-        }
+        <div 
+          className="searchPanel__text" 
+          onClick={() => backToRegion()}
+        >
+          Область: {activeRegion + (activeRegion ? ',' : '')}
+          {activeRegion && 
+            <div style={{display: 'inline-block', marginLeft: '15px'}}>Город: </div>  
+          }
+        </div>
       </div>
       <div className="searchPanel__content">
         {!cities && regions.map(region => (

@@ -17,7 +17,10 @@ const AppHeader = ({history}) => {
         src={logoIcon} 
         alt="logo" 
         className="logo" 
-        onClick={() => history.push({pathname: '/'})}
+        onClick={() => {
+          history.push({pathname: '/'});
+          setTogSearchCity(false);
+        }}
         style={{cursor: 'pointer'}}
       />
       <div className="header">
@@ -26,7 +29,7 @@ const AppHeader = ({history}) => {
             className="header__selection"
             onClick={() => setTogSearchCity(togSearchCity => !togSearchCity)}
           >
-            Выбрать город
+            Выбрать город <i class="header__selection--dropdown"></i>
           </div>
         </div>
       </div>

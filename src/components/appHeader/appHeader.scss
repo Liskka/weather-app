@@ -69,9 +69,22 @@
     font-size: 25px;
     cursor: pointer;
 
+    i {
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+    }
+
+    &--dropdown {
+      margin-bottom: 3px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+
     &:hover {
       transition: all 0.2s ease-out;
-      margin-top: -10px;
+      padding-bottom: 10px;
     }
   }
 

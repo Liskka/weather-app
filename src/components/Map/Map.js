@@ -25,7 +25,7 @@ const CityLink = ({cityInfo}) => {
   const {position: {top, left}} = cityInfo;
   
   return (
-    <Link className="cityLink" to={{pathname: cityInfo.fetchName, state: {fetchName: cityInfo.fetchName}}} style={{position: "absolute", top: String(top), left: String(left)}} >{cityInfo.name}</Link>
+    <Link className="cityLink" to={{pathname: cityInfo.fetchName, state: {fetchName: cityInfo.fetchName}}} style={{position: "absolute", top: String(top), left: String(left)}} ><div className="cityLink__text">{cityInfo.name}</div></Link>
     )
 }
 

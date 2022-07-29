@@ -60,8 +60,8 @@ const CurrentWeather = ({ match, location, history }) => {
   
   return (
     <div className='weather'>
+      <div className="weather__city"><div className="weather__text">Температура в городе {name}:</div></div>
       <div className="weather__date">{today}</div>
-      <div className="weather__city">Температура в городе {name}:</div>
       <div className="weather__temp">{temp}{'\u00b0'}C</div>
       <img className="weather__icon" src={`https://openweathermap.org/img/w/${icon}.png`} alt="weather" />
       <div className="weather__info">{info}</div>
