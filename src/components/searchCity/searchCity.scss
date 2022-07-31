@@ -3,12 +3,14 @@
 .searchPanel {
   position: relative;
   margin: 25px auto 30px;
-  width: 1000px;
+  min-width: 500px;
+  max-width: 1100px;
   min-height: 50px;
   background-color: var(--bg-color);
   transition: background-color 300ms linear;
   border-radius: 15px;
   color: var(--text-color);
+  font-size: 18px;
 
 
   &__info {
@@ -16,18 +18,17 @@
     position: absolute;
     padding: 0 7px 3px;
     left: 25px;
-    top: -12px;
+    top: -15px;
     -webkit-transform: skew(-20deg);
     background: var(--bg-color-header);
     // transition: background 900ms linear;
     border-radius: 7px;
     box-shadow: 0 2px 10px 2px rgb(0 0 0 / 40%);
-
   }
 
   &__text {
     -webkit-transform: skew(20deg);
-    font-size: 20px;
+    font-size: 24px;
   }
 
   &__content {
@@ -37,7 +38,8 @@
 
     &__item {
       display: flex;
-      margin: 5px;
+      // margin: 5px;
+      margin: 5px 15px;
       display: inline-block;
       width: 150px;
       cursor: pointer;
