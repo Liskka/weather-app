@@ -29,14 +29,39 @@
   }
 }
 
+.theme {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 65px;
+  height: 30px;
+  position: absolute;
+  right: 100px;
+  top: -43px;
+  background-color: rgb(197, 197, 197);
+  border-radius: 17px;
+
+  img {
+    width: 20px;
+    cursor: pointer;
+  }
+
+  .disabledTheme {
+    opacity: .4;
+  }
+}
+
 .header {
   // position: relative;
   width: 1200px;
   height: 60px;
   margin: 55px auto 10px;
   margin-left: 30px;
-  background-color: $main-color;
+  background-color: var(--bg-color);
+  transition: background-color 300ms linear;
   border-radius: 15px;
+  color: var(--text-color);
 
 
   animation-name: headerOpen;

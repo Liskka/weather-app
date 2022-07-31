@@ -19,7 +19,6 @@ const Map = () => {
   )
 }
 
-
 const CityLink = ({cityInfo}) => {
 
   const {position: {top, left}} = cityInfo;

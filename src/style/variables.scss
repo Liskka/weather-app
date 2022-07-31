@@ -1,1 +1,19 @@
 $main-color: rgba($color: #addaff, $alpha: .8);
+$dark-header: linear-gradient(to bottom right, rgb(167, 208, 252), rgb(73, 152, 255));
+
+
+body[data-theme='light'] {
+  --bg-img: url('../resources/img/lightTheme.jpg');
+  --bg-color: rgba(173, 218, 255, 0.8);
+  --bg-color-header: linear-gradient(to bottom right, rgb(167, 208, 252), rgb(73, 152, 255));
+  --map-img: url('../resources/img/map.svg');
+  --text-color: black;
+}
+
+body[data-theme='dark'] {
+  --bg-img: url('../resources/img/darkTheme.jpg');
+  --bg-color: rgba(237, 107, 107, 0.712);
+  --bg-color-header: linear-gradient(to bottom right, rgb(231, 97, 104), rgb(137, 41, 107));
+  --map-img: url('../resources/img/mapNight.svg');
+  --text-color: rgb(242, 221, 255);
+}

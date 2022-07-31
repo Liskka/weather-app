@@ -8,13 +8,13 @@ import './searchCity.scss';
 const SearchCity = ({setTogSearchCity, history}) => {
 
   const [regions, setRegions] = useState([]);
-  const [cities, setCities] = useState();
+  const [cities, setCities] = useState(null);
   const [activeRegion, setActiveRegion] = useState('');
 
 
   useEffect(() => {
     const region = regionAndCities.map(obl => obl.region);
-    // console.log(region);
+    console.log(region);
     setRegions(region);
   }, []);
 
@@ -60,7 +60,7 @@ const SearchCity = ({setTogSearchCity, history}) => {
           >{region}</li>
         ))}
         
-        {!!cities && Object.keys(cities).map(city => (
+        {cities && Object.keys(cities).map(city => (
           <li 
           className="searchPanel__content__item" 
           key={city}
