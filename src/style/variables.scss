@@ -11,6 +11,7 @@ body[data-theme='light'] {
   --text-color: black;
   --logo-img: url('../resources/img/pngegg.png');
   --logo-shadow: drop-shadow(5px 2px 13px #000);
+  --desc-text-shadow: none;
 }
 
 body[data-theme='dark'] {
@@ -21,4 +22,5 @@ body[data-theme='dark'] {
   --text-color: rgb(242, 221, 255);
   --logo-img: url('../resources/img/night.png');
   --logo-shadow: drop-shadow(11px 8px 14px #000);
+  --desc-text-shadow: 2px 2px 4px #000000;
 }

@@ -1,19 +1,25 @@
 @import '../../style//variables.scss';
 
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 35px;
+}
+
 .weather {
   display: inline-block;
   position: relative;
   min-width: 550px;
-  // position: relative;
-  // width: 600px;
   min-height: 180px;
+  margin-left: 40px;
+  padding: 15px;
   background-color: var(--bg-color);
   transition: background-color 300ms linear;
   border-radius: 15px;
-  padding: 15px;
-  margin-top: 30px;
   color: var(--text-color);
   box-shadow: 0 6px 18px 2px rgb(0 0 0 / 40%);
+  text-shadow: var(--desc-text-shadow);
 
   &__date {
     padding-left: 15px;
@@ -21,11 +27,12 @@
     font-size: 18px;
   }
 
-  &__city {
+  &__header {
     position: absolute;
-    padding: 0 7px 3px;
+    padding: 0 7px 5px;
     top: -15px;
     left: 35px;
+    text-shadow: var(--desc-text-shadow);
     -webkit-transform: skew(-20deg);
     // background: rgb(73, 152, 255);
     background: var(--bg-color-header);

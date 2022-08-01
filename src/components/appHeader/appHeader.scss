@@ -65,6 +65,7 @@
   height: 60px;
   margin: 55px auto 10px;
   margin-left: 30px;
+  text-shadow: var(--desc-text-shadow);
   background-color: var(--bg-color);
   transition: background-color 300ms linear;
   border-radius: 15px;
@@ -96,6 +97,7 @@
     // justify-content: space-around;
     align-items: center;
     padding-top: 10px;
+
   }
 
   &__selection {

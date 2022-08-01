@@ -7,7 +7,7 @@ import axios from 'axios';
 import './currentWeather.scss';
 
 const CurrentWeather = ({ match, location, history }) => {
-  // const [details, setDetails] = useState(false);
+  const [details, setDetails] = useState(false);
 
   // console.log('match = ', match)
   // console.log('location = ', location)
@@ -16,7 +16,6 @@ const CurrentWeather = ({ match, location, history }) => {
   const _apiBase = 'https://api.openweathermap.org/data/2.5/weather?';
   const _apiKey = 'a4d1d3041a0a7f472aafed3229a84bd1';
   const [weather, setWeather] = useState({});
-  // const [activeCity, setActiveCity] = useState('Zaporizhia');
   const activeCity = location.state.fetchName;
   
   const {name, temp, info, icon, date} = weather;
@@ -37,7 +36,7 @@ const CurrentWeather = ({ match, location, history }) => {
     async function getData() {
       try {
         const {data} = await axios.get(`${_apiBase}q=${activeCity}&lang=ru&appid=${_apiKey}`);
-        console.log('data = ', data)
+        // console.log('data = ', data)
         setWeather(transformData(data));
       } catch (error) {
         alert('Ошибка при получении погоды');
@@ -54,23 +53,40 @@ const CurrentWeather = ({ match, location, history }) => {
         info: data.weather[0].description[0].toUpperCase() + data.weather[0].description.slice(1),
         icon: data.weather[0].icon,
         activeCity,
-        date: data.dt * 1000
+        date: data.dt * 1000,
+
+        feelsLike: Math.round(data.main.feels_like - 273),
+        clouds: data.clouds.all,
+        humidity: data.main.humidity,
+        pressure: Math.round(data.main.grnd_level / 1.333), /* Миллиметр трутного столба */
+        windSpeed: Math.round(data.wind.speed),
+        sunrise: `${String('0' + new Date(data.sys.sunrise * 1000).getHours()).slice(-2)}:${String('0' + new Date(data.sys.sunrise * 1000).getMinutes()).slice(-2)}`,
+        sunset: `${String('0' + new Date(data.sys.sunset * 1000).getHours()).slice(-2)}:${String('0' + new Date(data.sys.sunset * 1000).getMinutes()).slice(-2)}`
       }
     }
 
+    // console.log('weather = ', weather);
+
+  const toggleDetails = () => {
+    setDetails(details => !details);
+  }
+
   
   return (
-    <div className='weather'>
-      <div className="weather__city"><div className="weather__text">Температура в городе {name}:</div></div>
-      <div className="weather__date">{today}</div>
-      <div className="weather__temp">{temp}{'\u00b0'}C</div>
-      <img className="weather__icon" src={`https://openweathermap.org/img/w/${icon}.png`} alt="weather" />
-      <div className="weather__info">{info}</div>
-      <div className="weather__detail"
-      >
-        Подробнее...
+    <div className="container">
+      <div className='weather'>
+        <div className="weather__header"><div className="weather__text">Температура в городе {name}:</div></div>
+        <div className="weather__date">{today}</div>
+        <div className="weather__temp">{temp}{'\u00b0'}C</div>
+        <img className="weather__icon" src={`https://openweathermap.org/img/w/${icon}.png`} alt="weather" />
+        <div className="weather__info">{info}</div>
+        <div className="weather__detail"
+          onClick={toggleDetails}
+        >
+          Подробнее...
+        </div>
       </div>
-      {/* <DetailsWeather activeCity={activeCity}/> */}
+        {details && <DetailsWeather weather={weather}/>}
     </div>
   )
 }

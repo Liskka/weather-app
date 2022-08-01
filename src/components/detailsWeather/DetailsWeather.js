@@ -1,31 +1,70 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import sunCycle from '../../resources/img/sunCycle.png';
+import './detailsWeather.scss';
 
-const DetailsWeather = ({activeCity}) => {
 
-  // const _apiBase = 'https://api.openweathermap.org/data/2.5/forecast?';
-  // const _apiKey = 'a4d1d3041a0a7f472aafed3229a84bd1';
+const DetailsWeather = ({weather}) => {
 
-  // //ПОЛУЧИТЬ ПОГОДУ НА 5 ДНЕЙ
-  // useEffect(() => {
-  //   async function getData() {
-  //     try {
-  //       const {data} = await axios.get(`${_apiBase}q=${activeCity}&lang=ru&appid=${_apiKey}`);
-  //       console.log('data = ', data.list);
-  //       // setWeather(transformData(data));
-  //     } catch (error) {
-  //       alert('Ошибка при получении погоды');
-  //     }
-  //   }
-    
-  //   getData();
-  // }, [activeCity]);
+  const {
+        temp = 0,
+        feelsLike = 0, 
+        clouds = '', 
+        humidity = 0, 
+        pressure = 0, 
+        windSpeed = '', 
+        sunrise = '', 
+        sunset = ''
+  } = weather;
+
+  const daylightMinutes = Number(sunset.slice(0, 2) * 60) + Number(sunset.slice(-2)) - Number(sunrise.slice(0, 2) * 60) - Number(sunrise.slice(-2));
+  const daylightTime = (daylightMinutes / 60 | 0) + " ч " + daylightMinutes % 60 + " мин" ;
+  console.log('daylight = ', daylightMinutes, daylightTime);
+
+  // console.log('weather = ', feelsLike, clouds, humidity, pressure, windSpeed, sunrise, sunset)
 
 
   return (
     <div className="details">
-
+      <div className="details__header"><div className="details__header__text">Подробная информация:</div></div>
+      <div class="details__item">
+        <div className="description">Температура</div>
+        <div className="info">{temp}{'\u00b0'}C</div>
+      </div>
+      <div class="details__item">
+        <div className="description">Ощущается</div>
+        <div className="info">{feelsLike}{'\u00b0'}C</div>
+      </div>
+      <div class="details__item">
+        <div className="description">Облачность</div>
+        <div className="info">{clouds}%</div>
+      </div>
+      <div class="details__item">
+        <div className="description">Влажность</div>
+        <div className="info">{humidity}%</div>
+      </div>
+      <div class="details__item">
+        <div className="description">Давление</div>
+        <div className="info">{pressure}мм</div>
+      </div>
+      <div class="details__item">
+        <div className="description">Скорость ветра</div>
+        <div className="info">{windSpeed}м/с</div>
+      </div>
+      <div className="details__sunCycle">
+        <img src={sunCycle} alt="sunCycle" />
+        <div className="details__sunCycle__descr">
+          <div className="details__sunCycle__info">Восход</div>
+          <div className="details__sunCycle__info">Световой день</div>
+          <div className="details__sunCycle__info">Закат</div>
+        </div>
+        <div className="details__sunCycle__descr">
+        <div className="details__sunCycle__info">{sunrise}</div>
+        <div className="details__sunCycle__info">{daylightTime}</div>
+        <div className="details__sunCycle__info">{sunset}</div>
+        </div>
+      </div>
     </div>
   )
 }
