@@ -11,6 +11,7 @@
   border-radius: 15px;
   color: var(--text-color);
   font-size: 18px;
+  box-shadow: 0 6px 18px 2px rgb(0 0 0 / 40%);
 
 
   &__info {
@@ -21,7 +22,7 @@
     top: -15px;
     -webkit-transform: skew(-20deg);
     background: var(--bg-color-header);
-    // transition: background 900ms linear;
+    transition: all 0.3s ease-out;
     border-radius: 7px;
     box-shadow: 0 2px 10px 2px rgb(0 0 0 / 40%);
   }
@@ -38,11 +39,21 @@
 
     &__item {
       display: flex;
-      // margin: 5px;
       margin: 5px 15px;
       display: inline-block;
       width: 150px;
       cursor: pointer;
+      padding: 0 7px 3px;
+
+
+      &:hover {
+        transition: all 0.1s ease-out;
+        background: var(--bg-color-header);
+        border-radius: 7px;
+        box-shadow: 0 5px 6px 1px rgb(0 0 0 / 40%);
+        z-index: 1;
+      }
+
     }
   }
 

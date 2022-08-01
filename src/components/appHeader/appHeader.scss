@@ -6,9 +6,16 @@
   top: -50px;
   width: 150px;
   height: 110px;
+  background-image: var(--logo-img);
+  background-size: cover;
+  filter: var(--logo-shadow);
+  transition: all 0.3s ease-out;
+
+  button:active {
+    scale: 1.1;
+  }
 
   &:hover {
-    transition: all 0.2s ease-out;
     transform: scale(1.04);
   }
 
@@ -62,6 +69,8 @@
   transition: background-color 300ms linear;
   border-radius: 15px;
   color: var(--text-color);
+  transition: color 300ms linear;
+  box-shadow: $component-shadow;
 
 
   animation-name: headerOpen;

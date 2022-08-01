@@ -10,7 +10,7 @@ const CurrentWeather = ({ match, location, history }) => {
   // const [details, setDetails] = useState(false);
 
   // console.log('match = ', match)
-  console.log('location = ', location)
+  // console.log('location = ', location)
   // console.log('history = ', history)
   
   const _apiBase = 'https://api.openweathermap.org/data/2.5/weather?';
@@ -37,6 +37,7 @@ const CurrentWeather = ({ match, location, history }) => {
     async function getData() {
       try {
         const {data} = await axios.get(`${_apiBase}q=${activeCity}&lang=ru&appid=${_apiKey}`);
+        console.log('data = ', data)
         setWeather(transformData(data));
       } catch (error) {
         alert('Ошибка при получении погоды');

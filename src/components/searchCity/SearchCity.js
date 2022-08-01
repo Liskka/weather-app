@@ -14,7 +14,7 @@ const SearchCity = ({setTogSearchCity, history}) => {
 
   useEffect(() => {
     const region = regionAndCities.map(obl => obl.region);
-    console.log(region);
+    // console.log(region);
     setRegions(region);
   }, []);
 
@@ -27,6 +27,7 @@ const SearchCity = ({setTogSearchCity, history}) => {
   const sumbitCity = (city) => {
     // setActiveCity(city);
     setTogSearchCity(false);
+    // console.log('history = ', history);
     history.push({pathname: cities[city], state: {fetchName: cities[city]}})
   }
 
@@ -57,7 +58,7 @@ const SearchCity = ({setTogSearchCity, history}) => {
             className="searchPanel__content__item" 
             key={region}
             onClick={() => targetCity(region)}
-          >{region}</li>
+          ><div className="searchPanel__item-text">{region}</div></li>
         ))}
         
         {cities && Object.keys(cities).map(city => (

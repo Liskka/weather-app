@@ -23,16 +23,16 @@ const AppHeader = ({history}) => {
 
   return (
     <>
-      <img 
-        src={theme === 'light' ? logoDay : logoNught} 
-        alt="logo" 
+      <div 
+        // src={theme === 'light' ? logoDay : logoNught} 
+        // alt="logo" 
         className="logo" 
         onClick={() => {
           history.push({pathname: '/'});
           setTogSearchCity(false);
         }}
         style={{cursor: 'pointer'}}
-      />
+      ></div>
       <div className="theme">
         <img 
           className={theme !== 'light' && 'disabledTheme'}

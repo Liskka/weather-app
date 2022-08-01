@@ -6,6 +6,7 @@
   width: 726px;
   height: 490px;
   background-image: var(--map-img);
+  transition: background-image 300ms linear;
   background-repeat: no-repeat;
   background-size: contain;
   color: var(--text-color);
