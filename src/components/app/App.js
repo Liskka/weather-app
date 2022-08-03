@@ -23,15 +23,12 @@ function App() {
 
   return (
     <Router>
-      <div className="app">
+      <div className="container">
           <AppHeader />
           <Route exact path="/" component={HomePage} />
           {cities.map((city, i) => (
             <Route path={"/" + city} key={city + i} component={CurrentWeather} />
           ))}
-
-
-        <WeatherFiveDays/>
       </div>
    </Router>
   );

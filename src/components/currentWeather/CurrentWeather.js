@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import DetailsWeather from '../detailsWeather/DetailsWeather';
+import WeatherFiveDays from '../weatherFiveDays/WeatherFiveDays';
 
 import axios from 'axios';
 
+import windIcon from '../../resources/icon/wind.png';
 import './currentWeather.scss';
 
 const CurrentWeather = ({ match, location, history }) => {
-  const [details, setDetails] = useState(false);
 
   // console.log('match = ', match)
   // console.log('location = ', location)
@@ -58,7 +59,7 @@ const CurrentWeather = ({ match, location, history }) => {
         feelsLike: Math.round(data.main.feels_like - 273),
         clouds: data.clouds.all,
         humidity: data.main.humidity,
-        pressure: Math.round(data.main.grnd_level / 1.333), /* Миллиметр трутного столба */
+        pressure: Math.round((data.main.grnd_level || data.main.sea_level || data.main.pressure) / 1.333), /* Миллиметр трутного столба */
         windSpeed: Math.round(data.wind.speed),
         sunrise: `${String('0' + new Date(data.sys.sunrise * 1000).getHours()).slice(-2)}:${String('0' + new Date(data.sys.sunrise * 1000).getMinutes()).slice(-2)}`,
         sunset: `${String('0' + new Date(data.sys.sunset * 1000).getHours()).slice(-2)}:${String('0' + new Date(data.sys.sunset * 1000).getMinutes()).slice(-2)}`
@@ -66,27 +67,40 @@ const CurrentWeather = ({ match, location, history }) => {
     }
 
     // console.log('weather = ', weather);
-
-  const toggleDetails = () => {
-    setDetails(details => !details);
-  }
-
   
   return (
-    <div className="container">
-      <div className='weather'>
-        <div className="weather__header"><div className="weather__text">Температура в городе {name}:</div></div>
-        <div className="weather__date">{today}</div>
-        <div className="weather__temp">{temp}{'\u00b0'}C</div>
-        <img className="weather__icon" src={`https://openweathermap.org/img/w/${icon}.png`} alt="weather" />
-        <div className="weather__info">{info}</div>
-        <div className="weather__detail"
-          onClick={toggleDetails}
-        >
-          Подробнее...
+    <div className='wrapper'>
+    {/* <div className="container"> */}
+      {/* <button onClick={() => history.push({pathname: location.pathname + `/test`, search: `text=123`})}>click</button> */}
+      {/* <button onClick={() => history.push({pathname: location.pathname + `/test`, search: {text: '123'}})}>click</button> */}
+      <div className="wrapper__left">
+        <div className='weather'>
+          <div className="weather__header">
+            <div className="weather__text">Температура в городе {name}:
+            </div>
+          </div>
+          <div className="weather__date">{today}</div>
+          <div className="weather__main-info">
+            <div className="info-temp">
+              <div className="weather__weather-icon">
+                <img src={`https://openweathermap.org/img/w/${icon}.png`} alt="weather" />
+              </div>
+              <div className="weather__temp">{temp}{'\u00b0'}C</div>
+            </div>
+            <div className="info-temp">
+              <div className="weather__wind-icon">
+                <img src={windIcon} alt="wind" />
+              </div>
+              <div className="weather__temp">
+                {`${weather.windSpeed}м/с`}
+              </div>
+            </div>
+          </div>
+              <div className="weather__descr">{info}</div>
         </div>
+          <WeatherFiveDays activeCity={activeCity}/>
       </div>
-        {details && <DetailsWeather weather={weather}/>}
+        <DetailsWeather weather={weather}/>
     </div>
   )
 }

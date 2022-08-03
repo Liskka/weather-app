@@ -27,8 +27,9 @@ const SearchCity = ({setTogSearchCity, history}) => {
   const sumbitCity = (city) => {
     // setActiveCity(city);
     setTogSearchCity(false);
-    // console.log('history = ', history);
-    history.push({pathname: cities[city], state: {fetchName: cities[city]}})
+    // console.log('history1 = ', history.location);
+    history.push({pathname: cities[city], state: {fetchName: cities[city]}});
+    // console.log('history2 = ', history.location);
   }
 
   // console.log(Object.keys(cities));
@@ -55,7 +56,7 @@ const SearchCity = ({setTogSearchCity, history}) => {
       <div className="searchPanel__content">
         {!cities && regions.map(region => (
           <li 
-            className="searchPanel__content__item" 
+            className="searchPanel__item" 
             key={region}
             onClick={() => targetCity(region)}
           ><div className="searchPanel__item-text">{region}</div></li>
@@ -63,7 +64,7 @@ const SearchCity = ({setTogSearchCity, history}) => {
         
         {cities && Object.keys(cities).map(city => (
           <li 
-          className="searchPanel__content__item" 
+          className="searchPanel__item" 
           key={city}
           onClick={() => sumbitCity(city)}
         >{city}</li>

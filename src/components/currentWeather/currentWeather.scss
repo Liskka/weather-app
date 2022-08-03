@@ -1,18 +1,27 @@
-@import '../../style//variables.scss';
+@import '../../style/variables.scss';
 
-.container {
+.wrapper {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-around;
+  // flex-wrap: wrap;
   margin-top: 35px;
+  margin-bottom: 50px;
+  margin: 35px auto 35px;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .weather {
-  display: inline-block;
+  // display: inline-block;
   position: relative;
-  min-width: 550px;
-  min-height: 180px;
-  margin-left: 40px;
+  // min-width: 550px;
+  // min-height: 180px;
+  // margin-left: 40px;
   padding: 15px;
   background-color: var(--bg-color);
   transition: background-color 300ms linear;
@@ -21,10 +30,36 @@
   box-shadow: 0 6px 18px 2px rgb(0 0 0 / 40%);
   text-shadow: var(--desc-text-shadow);
 
+  &__text {
+    font-size: 25px;
+    -webkit-transform: skew(20deg);
+  }
+
+  &__main-info {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &__wind-icon>img {
+    width: 100px;
+  }
+
+  &__weather-icon>img {
+    width: 100px;
+  }
+
+  &__temp {
+    // width: 50px;
+    margin-top: 35px;
+    font-size: 60px;
+  }
+
   &__date {
     padding-left: 15px;
     margin-top: 21px;
-    font-size: 18px;
+    font-size: 21px;
   }
 
   &__header {
@@ -41,29 +76,14 @@
     box-shadow: 0 6px 18px 2px rgb(0 0 0 / 40%);
   }
 
-  &__text {
-    font-size: 25px;
-    -webkit-transform: skew(20deg);
-  }
 
-  &__temp {
-    font-size: 70px;
-    padding-left: 20px;
-    display: inline-block;
-  }
 
-  &__info {
-    font-size: 30px;
-    bottom: 15px;
-    position: absolute;
-    margin-left: 5px;
-  }
 
-  &__icon {
-    position: absolute;
-    width: 100px;
-    display: inline-block;
-  }
+  // &__icon {
+  //   // position: absolute;
+  //   width: 100px;
+  //   display: inline-block;
+  // }
 
   &__detail {
     position: absolute;
@@ -84,8 +104,8 @@
 
   @keyframes weatherOpen {
     from {
-      left: -700px;
-      opacity: .1;
+      left: -100px;
+      opacity: 0;
     }
 
     to {
@@ -93,4 +113,31 @@
       opacity: 1;
     }
   }
+
+  &__descr {
+    font-size: 25px;
+  }
+}
+
+
+.info-temp {
+  display: flex;
+  flex-direction: row;
+  margin: 0 15px;
+
+  // &__icon>img {
+  //   width: 50px;
+  // }
+
+  &__temp {
+    font-size: 70px;
+    padding-left: 20px;
+    display: inline-block;
+  }
+
+  // &__info {
+  //   font-size: 30px;
+  //   bottom: 15px;
+  //   margin-left: 5px;
+  // }
 }
