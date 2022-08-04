@@ -53,7 +53,7 @@ const DetailsWeather = ({weather}) => {
         <div className="info">{windSpeed}м/с</div>
       </div>
       <div className="details__sunCycle">
-        <img /* className="details__item" */ src={sunCycle} alt="sunCycle" />
+        <img src={sunCycle} alt="sunCycle" />
         <div className="details__descr">
           <div className="details__info">Восход</div>
           <div className="details__info">Световой день</div>

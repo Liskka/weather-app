@@ -42,7 +42,7 @@ const SearchCity = ({setTogSearchCity, history}) => {
 
   return (
     <div className="searchPanel">
-      <div className="searchPanel__info">
+      <div className="searchPanel__header">
         <div 
           className="searchPanel__text" 
           onClick={() => backToRegion()}

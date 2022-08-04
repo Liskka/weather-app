@@ -40,7 +40,7 @@
     -webkit-transform: skew(20deg);
 
     @media (max-width: 576px) {
-      font-size: 22px;
+      font-size: 19px;
     }
   }
 
@@ -82,6 +82,11 @@
     padding-left: 15px;
     margin-top: 21px;
     font-size: 21px;
+
+    @media (max-width: 576px) {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
   }
 
   &__header {
@@ -98,8 +103,8 @@
     box-shadow: 0 6px 18px 2px rgb(0 0 0 / 40%);
 
     @media (max-width: 576px) {
-      // top: -25px;
-      // left: 15px;
+      top: -13px;
+      left: 15px;
     }
   }
 
