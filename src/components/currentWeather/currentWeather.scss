@@ -14,6 +14,11 @@
     display: flex;
     flex-direction: column;
   }
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .weather {
@@ -33,6 +38,10 @@
   &__text {
     font-size: 25px;
     -webkit-transform: skew(20deg);
+
+    @media (max-width: 576px) {
+      font-size: 22px;
+    }
   }
 
   &__main-info {
@@ -44,16 +53,29 @@
 
   &__wind-icon>img {
     width: 100px;
+
+    @media (max-width: 576px) {
+      width: 50px;
+    }
   }
 
   &__weather-icon>img {
     width: 100px;
+
+    @media (max-width: 576px) {
+      width: 50px;
+      transform: scale(2);
+    }
   }
 
   &__temp {
     // width: 50px;
     margin-top: 35px;
     font-size: 60px;
+
+    @media (max-width: 576px) {
+      font-size: 30px;
+    }
   }
 
   &__date {
@@ -74,16 +96,12 @@
     // transition: background 900ms linear;
     border-radius: 7px;
     box-shadow: 0 6px 18px 2px rgb(0 0 0 / 40%);
+
+    @media (max-width: 576px) {
+      // top: -25px;
+      // left: 15px;
+    }
   }
-
-
-
-
-  // &__icon {
-  //   // position: absolute;
-  //   width: 100px;
-  //   display: inline-block;
-  // }
 
   &__detail {
     position: absolute;

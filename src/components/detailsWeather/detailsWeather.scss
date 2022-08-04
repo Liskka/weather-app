@@ -84,6 +84,10 @@
     padding: 0 10px;
     text-shadow: var(--desc-text-shadow);
   }
+
+  @media (max-width: 1200px) {
+    margin-top: 50px;
+  }
 }
 
 .description {

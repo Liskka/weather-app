@@ -4,13 +4,12 @@ import axios from "axios";
 
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import 'tippy.js/animations/scale.css';
 
 import './weatherFiveDays.scss';
 
 
 const WeatherFiveDays = ({location}) => {
-  // console.log(activeCity)
-
   
   const _apiBase = 'https://api.openweathermap.org/data/2.5/forecast?';
   const _apiKey = 'a4d1d3041a0a7f472aafed3229a84bd1';
@@ -74,7 +73,7 @@ const WeatherFiveDays = ({location}) => {
 const Day = ({currentDay}) => {
   const {date, descr, icon, temp} = currentDay;
   return (
-    <Tippy placement="bottom" content={descr}>
+    <Tippy placement="bottom" animation="scale" content={descr}>
       <div className="five-days__day">
         <div>{date}</div>
         <div>

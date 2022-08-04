@@ -9,7 +9,7 @@ const Map = () => {
   // console.log(citiesInfo)
 
   return (
-    <div className="map__container">
+    <div className="map">
       <div className="map__content">
         {citiesInfo.length ? citiesInfo.map(cityInfo => (
           <CityLink key={cityInfo.id} cityInfo={cityInfo} />
