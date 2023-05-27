@@ -1,0 +1,104 @@
+@import '../../style/variables.scss';
+
+.details {
+  position: relative;
+  padding: 25px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  background-color: var(--bg-color);
+  transition: background-color 300ms linear;
+  border-radius: 15px;
+  color: var(--text-color);
+  box-shadow: 0 6px 18px 2px rgb(0 0 0 / 40%);
+
+  &__header {
+    text-shadow: var(--desc-text-shadow);
+    position: absolute;
+    padding: 0 7px 5px;
+    top: -15px;
+    left: 35px;
+    -webkit-transform: skew(-20deg);
+    background: var(--bg-color-header);
+    border-radius: 7px;
+    box-shadow: 0 6px 18px 2px rgb(0 0 0 / 40%);
+
+    @media (max-width: 576px) {
+      top: -13px;
+      left: 15px;
+    }
+  }
+
+  &__text {
+    font-size: 25px;
+    -webkit-transform: skew(20deg);
+
+    @media (max-width: 576px) {
+      font-size: 20px;
+    }
+  }
+
+  animation-name: detailsOpen;
+  animation-duration: 0.5s;
+
+  @keyframes detailsOpen {
+    from {
+      right: -200px;
+      opacity: 0;
+    }
+
+    to {
+      right: 0px;
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 0px;
+
+    padding: 5px;
+    text-shadow: var(--desc-text-shadow);
+    font-size: 23px;
+    transition: all 200ms linear;
+
+    &:hover {
+      border-radius: 7px;
+      box-shadow: 0 5px 6px 3px rgb(0 0 0 / 40%);
+    }
+  }
+
+  &__sunCycle {
+    margin-top: 10px;
+
+    @media (max-width: 576px) {
+      img {
+        display: none;
+      }
+    }
+  }
+
+  &__descr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    text-shadow: var(--desc-text-shadow);
+  }
+
+  @media (max-width: 1200px) {
+    margin-top: 50px;
+  }
+}
+
+.description {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.info {
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  justify-content: center;
+}

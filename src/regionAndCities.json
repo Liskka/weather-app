@@ -1,0 +1,275 @@
+[
+  {
+    "region": "ИваноФранковская",
+    "cities": {
+      "Болехов": "Bolekhiv",
+      "Бурштын": "Burshtyn",
+      "Галич": "Halych",
+      "Городенка": "Horodenka",
+      "Долина": "Dolyna",
+      "Ивано Франковск": "Ivano-Frankivsk",
+      "Калуш": "Kalush",
+      "Коломыя": "Kolomyia",
+      "Косов": "Kosiv",
+      "Надворная": "Nadvirna",
+      "Перегинское": "",
+      "Рогатин": "Rohatyn",
+      "Снятын": "Sniatyn",
+      "Тысменица": "Tysmenytsia",
+      "Тлумач": "Tlumach",
+      "Яремче": "Yaremche"
+    }
+  },
+  {
+    "region": "Винницкая",
+    "cities": {
+      "Бар": "Bar",
+      "Бершадь": "Bershad",
+      "Винница": "Vinnytsia",
+      "Гайсин": "Haisyn",
+      "Гнивань": "Hnivan",
+      "Жмеринка": "Zhmerynka",
+      "Ильинцы": "Illintsi",
+      "Калиновка": "Kalynivka",
+      "Казатин": "Koziatyn",
+      "Ладыжин": "Ladyzhyn",
+      "Могилев Подольский": "Mohyliv-Podilskyi",
+      "Немиров": "Nemyriv",
+      "Погребище": "Pohrebyshche",
+      "Тульчин": "Tulchyn",
+      "Хмельник": "Khmilnyk",
+      "Шаргород": "Sharhorod",
+      "Ямполь": "Yampil"
+    }
+  },
+  {
+    "region": "Волынская",
+    "cities": {
+      "Владимир Волынский": "Volodymyr-Volynskyi",
+      "Горохов": "Horokhiv",
+      "Камень Каширский": "Kamin-Kashyrskyi",
+      "Киверцы": "Kivertsi",
+      "Ковель": "Kovel",
+      "Луцк": "Lutsk",
+      "Любомль": "Liuboml",
+      "Нововолынск": "Novovolynsk",
+      "Рожище": "Rozhyshche",
+      "Устилуг": "Ustyluh"
+    }
+  },
+  {
+    "region": "Днепропетровская",
+    "cities": {
+      "Апостолово": "Apostolove",
+      "Верхнеднепровск": "Verkhnodniprovsk",
+      "Вольногорск": "Vilnohirsk",
+      "Днепр": "Dnipro",
+      "ЖелтыеВоды": "Zhovti Vody",
+      "Каменское": "Kamianske",
+      "КривойРог": "Kryvyi Rih",
+      "Марганец": "Marhanets",
+      "Никополь": "Nikopol",
+      "Новомосковск": "Novomoskovsk",
+      "Пятихатки": "Piatykhatky",
+      "Павлоград": "Pavlohrad",
+      "Перещепино": "Pereshchepyne",
+      "Першотравенск": "Pershotravensk",
+      "Подгородное": "Pidhorodne",
+      "Синельниково": "Synelnykove",
+      "Терновка": "Ternivka"
+    }
+  },
+  {
+    "region": "Донецкая",
+    "cities": {
+      "Авдеевка": "Avdiivka",
+      "Амвросиевка": "Amvrosiivka",
+      "Бахмут": "Bakhmut",
+      "Волноваха": "Volnovakha",
+      "Угледар": "Vuhledar",
+      "Горловка": "Horlivka",
+      "Дебальцево": "Debaltseve",
+      "Доброполье": "Dobropillia",
+      "Докучаевск": "Dokuchaievsk",
+      "Донецк": "Donetsk",
+      "Дружковка": "Druzhkivka",
+      "Енакиево": "Yenakiieve",
+      "Зугрэс": "Zuhres",
+      "Кировское": "Kirovske",
+      "Константиновка": "Kostiantynivka",
+      "Краматорск": "Kramatorsk",
+      "Макеевка": "Makiivka",
+      "Мариуполь": "Mariupol",
+      "Мирноград": "Myrnohrad",
+      "Новоазовск": "Novoazovsk",
+      "Новогродовка": "Novohrodivka",
+      "Покровск": "Pokrovsk",
+      "Селидово": "Selydove",
+      "Славянск": "Sloviansk",
+      "Снежное": "Snizhne",
+      "Соледар": "Soledar",
+      "Торез": "Torez",
+      "Торецк": "Toretsk",
+      "Харцызск": "Khartsyzk",
+      "Шахтерск": "Shakhtarsk",
+      "Ясиноватая": "Yasynuvata"
+    }
+  },
+  {
+    "region": "Житомирская",
+    "cities": {
+      "Андрушевка": "Andrushivka",
+      "Барановка": "Baranivka",
+      "Бердичев": "Berdychiv",
+      "Володарск Волынский": "",
+      "Житомир": "Zhytomyr",
+      "Коростень": "Korosten",
+      "Коростышев": "Korostyshiv",
+      "Малин": "Malyn",
+      "Новоград Волынский": "Novohrad-Volynskyi",
+      "Овруч": "Ovruch",
+      "Радомышль": "Radomyshl"
+    }
+  },
+  {
+    "region": "Закарпатская",
+    "cities": {
+      "Берегово": "Berehove",
+      "Виноградов": "Vynohradiv",
+      "Иршава": "Irshava",
+      "Мукачево": "Mukachevo",
+      "Перечин": "Perechyn",
+      "Рахов": "Rakhiv",
+      "Свалява": "Svaliava",
+      "Тячев": "Tiachiv",
+      "Ужгород": "Uzhhorod",
+      "Хуст": "Khust",
+      "Чоп": "Chop"
+    }
+  },
+  {
+    "region": "Запорожская",
+    "cities": {
+      "Бердянск": "Berdyansk",
+      "Васильевка": "Vasylivka",
+      "Вольнянск": "Vilniansk",
+      "Гуляйполе": "Huliaipole",
+      "Днепрорудное": "Dniprorudne",
+      "Энергодар": "Enerhodar",
+      "Запорожье": "Zaporizhia",
+      "Каменка Днепровская": "Kamianka-Dniprovska",
+      "Мелитополь": "Melitopol",
+      "Молочанск": "Molochansk",
+      "Орехов": "Orikhiv",
+      "Пологи": "Polohy",
+      "Приморск": "Prymorsk",
+      "Токмак": "Tokmak"
+    }
+  },
+  {
+    "region": "Кировоградская",
+    "cities": {
+      "Александрия": "Oleksandriia",
+      "Бобринец": "Bobrynets",
+      "Гайворон": "Haivoron",
+      "Долинская": "Dolynska",
+      "Знаменка": "Znamianka",
+      "Кропивницкий": "Kropyvnytskyi",
+      "МалаяВиска": "Mala Vyska",
+      "Новомиргород": "Novomyrhorod",
+      "Новоукраинка": "Novoukrainka",
+      "Светловодск": "Svitlovodsk"
+    }
+  },
+  {
+    "region": "Киевская",
+    "cities": {
+      "Киев": "Kyiv",
+      "Березань": "Berezan",
+      "Белая Церковь": "Bila Tserkva",
+      "Борисполь": "Boryspil",
+      "Бородянка": "",
+      "Боярка": "Boyarka",
+      "Бровары": "Brovary",
+      "Буча": "Bucha",
+      "Васильков": "Vasylkiv",
+      "Вышгород": "Vyshhorod",
+      "Вишневое": "Vyshneve",
+      "Ирпень": "Irpin",
+      "Кагарлык": "Kaharlyk",
+      "Мироновка": "Myronivka",
+      "Обухов": "Obukhiv",
+      "Переяслав Хмельницкий": "Pereiaslav-Khmelnytskyi",
+      "Припять": "Pripyat",
+      "Ржищев": "Rzhyshchiv",
+      "Сквира": "Skvyra",
+      "Славутич": "Slavutych",
+      "Тараща": "Tarashcha",
+      "Тетиев": "Tetiiv",
+      "Узин": "Uzyn",
+      "Фастов": "Fastiv",
+      "Чернобыль": "Chornobyl",
+      "Яготин": "Yahotyn"
+    }
+  },
+  {
+    "region": "Крым",
+    "cities": {}
+  },
+  {
+    "region": "Луганская",
+    "cities": {}
+  },
+  {
+    "region": "Львовская",
+    "cities": {}
+  },
+  {
+    "region": "Николаевская",
+    "cities": {}
+  },
+  {
+    "region": "Одесская",
+    "cities": {}
+  },
+  {
+    "region": "Полтавская",
+    "cities": {}
+  },
+  {
+    "region": "Ровенская",
+    "cities": {}
+  },
+  {
+    "region": "Сумская",
+    "cities": {}
+  },
+  {
+    "region": "Тернопольская",
+    "cities": {}
+  },
+  {
+    "region": "Харьковская",
+    "cities": {}
+  },
+  {
+    "region": "Херсонская",
+    "cities": {}
+  },
+  {
+    "region": "Хмельницкая",
+    "cities": {}
+  },
+  {
+    "region": "Черкасская",
+    "cities": {}
+  },
+  {
+    "region": "Черновицкая",
+    "cities": {}
+  },
+  {
+    "region": "Черниговская",
+    "cities": {}
+  }
+]

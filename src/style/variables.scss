@@ -1,0 +1,25 @@
+$main-color: rgba($color: #addaff, $alpha: .8);
+$component-shadow: 0 6px 18px 2px rgb(0 0 0 / 40%);
+
+
+body[data-theme='light'] {
+  --bg-img: url('../resources/img/lightTheme.jpg');
+  --bg-color: rgba(173, 218, 255, 0.8);
+  --bg-color-header: linear-gradient(to bottom right, rgb(167, 208, 252), rgb(73, 152, 255));
+  --map-img: url('../resources/img/map.svg');
+  --text-color: #000;
+  --logo-img: url('../resources/img/pngegg.png');
+  --logo-shadow: drop-shadow(5px 2px 13px #000);
+  --desc-text-shadow: none;
+}
+
+body[data-theme='dark'] {
+  --bg-img: url('../resources/img/darkTheme.jpg');
+  --bg-color: rgba(237, 107, 107, 0.712);
+  --bg-color-header: linear-gradient(to bottom right, rgb(231, 97, 104), rgb(137, 41, 107));
+  --map-img: url('../resources/img/mapNight.svg');
+  --text-color: rgb(242, 221, 255);
+  --logo-img: url('../resources/img/night.png');
+  --logo-shadow: drop-shadow(11px 8px 14px #000);
+  --desc-text-shadow: 2px 2px 4px #000000;
+}

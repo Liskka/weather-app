@@ -1,0 +1,158 @@
+@import '../../style//variables.scss';
+
+
+
+
+
+.header {
+  position: relative;
+  margin-top: 55px;
+  transition: background-color 300ms linear;
+  transition: color 300ms linear;
+
+
+  animation-name: headerOpen;
+  animation-duration: 0.5s;
+
+  @keyframes headerOpen {
+    from {
+      opacity: 0;
+      width: 0px;
+      margin: 55px 0;
+    }
+
+    to {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 30px;
+  }
+
+  &__logo {
+    position: absolute;
+    // left: 30px;
+    top: -50px;
+    width: 150px;
+    height: 110px;
+    background-image: var(--logo-img);
+    background-size: cover;
+    filter: var(--logo-shadow);
+    transition: all 0.3s ease-out;
+
+
+    &:hover {
+      transform: scale(1.04);
+    }
+
+
+    animation-name: skyOpen;
+    animation-duration: 0.5s;
+
+    @keyframes skyOpen {
+      from {
+        transform: scale(0);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 768px) {
+      top: -27px;
+      width: 89px;
+      height: 67px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 40px;
+    height: 60px;
+    padding: 10px 15px 0 140px;
+    background-color: var(--bg-color);
+    text-shadow: var(--desc-text-shadow);
+    border-radius: 15px;
+    color: var(--text-color);
+    box-shadow: $component-shadow;
+
+    @media (max-width: 768px) {
+      height: 40px;
+      padding: 0px 15px 0 140px;
+    }
+
+    @media (max-width: 576px) {
+      margin-left: 10px;
+      padding: 0px 5px 0px 102px;
+
+    }
+  }
+
+  &__dropdown {
+    margin-bottom: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+
+    @media (max-width: 470px) {
+      margin-bottom: 0;
+      margin-left: 3px;
+    }
+  }
+
+  &__selection {
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+
+    @media (max-width: 470px) {
+      font-size: 16px;
+    }
+
+
+    &:hover {
+      transition: all 0.2s ease-out;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__dropdown {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+}
+
+.sumbit-theme {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 65px;
+  height: 30px;
+  background-color: rgb(197, 197, 197);
+  border-radius: 17px;
+  box-shadow: 0 3px 8px 2px rgb(0 0 0 / 40%);
+}
+
+.light {
+  width: 20px;
+  cursor: default;
+}
+
+.disabled-theme {
+  width: 20px;
+  opacity: .4;
+  cursor: pointer;
+}
+
+.active-theme {
+  width: 20px;
+}
